@@ -11,15 +11,24 @@ import Skills from './component/Skills';
 import Contact from './component/Contact';
 import Footer from './component/Footer';
 import Certificates from './component/Certificates ';
+import LoadingScreen from './component/LoadingScreen';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+  const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
       setDarkMode(true);
     }
+
+    // Show main content after loading screen (2.5 seconds)
+    const timer = setTimeout(() => {
+      setShowContent(true);
+    }, 2500);
+
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
@@ -40,22 +49,30 @@ function App() {
         darkMode ? 'bg-black text-white' : 'bg-white text-black'
       }`}
     >
-      <Navbar darkMode={darkMode} toggleTheme={toggleTheme} />
-      <SocialLinks darkMode={darkMode} />
-      <ThemeToggle darkMode={darkMode} toggleTheme={toggleTheme} />
-      
-      <main>
-        <Home />
-        <About />
-        <Education />
-        <Experience />
-        <Skills />
-        <Projects />
-        <Certificates/>
-        <Contact />
-      </main>
+      {/* Loading Screen */}
+      <LoadingScreen />
 
-      {/* <Footer /> */}
+      {/* Main App Content - Only show after loading */}
+      {showContent && (
+        <>
+          <Navbar darkMode={darkMode} toggleTheme={toggleTheme} />
+          <SocialLinks darkMode={darkMode} />
+          <ThemeToggle darkMode={darkMode} toggleTheme={toggleTheme} />
+          
+          <main>
+            <Home />
+            <About />
+            <Education />
+            <Experience />
+            <Skills />
+            <Projects />
+            <Certificates/>
+            <Contact />
+          </main>
+
+          {/* <Footer /> */}
+        </>
+      )}
     </div>
   );
 }
