@@ -60,9 +60,12 @@ const Projects = () => {
       className="py-10 px-6 sm:px-16 transition-colors duration-500"
     >
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12 text-black">
+        <h2 className="text-4xl font-bold text-center mb-4 text-black">
           Projects
         </h2>
+          <p className="mt-4 text-center text-inherit text-lg opacity-80 mb-8">
+
+Showcasing innovation and technical execution  </p>
 
         {/* 2 cards per row */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">

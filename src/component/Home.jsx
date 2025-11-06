@@ -62,9 +62,9 @@ const Home = () => {
                 <FaCode className="text-xl sm:text-2xl text-inherit" />
               </div>
               <div className="flex-1">
-                <h3 className="text-lg sm:text-xl font-bold mb-1 text-inherit">Modern Stack</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-1 text-inherit">Full Stack</h3>
                 <p className="text-xs sm:text-sm text-inherit opacity-70 leading-tight">
-                  React, Node.js, MongoDB
+                  Frontend & Backend Expertise
                 </p>
               </div>
             </div>
@@ -78,10 +78,10 @@ const Home = () => {
                 <FaRocket className="text-xl sm:text-2xl text-inherit" />
               </div>
               <div className="flex-1">
-                <h3 className="text-lg sm:text-xl font-bold mb-1 text-inherit">Fast Delivery</h3>
-                <p className="text-xs sm:text-sm text-inherit opacity-70 leading-tight">
-                  Quality code, quick turnaround
-                </p>
+                 <h3 className="text-lg sm:text-xl font-bold mb-1 text-inherit">Multi-Platform</h3>
+                 <p className="text-xs sm:text-sm text-inherit opacity-70 leading-tight">
+                    Websites & mobile apps
+                  </p>
               </div>
             </div>
           </div>

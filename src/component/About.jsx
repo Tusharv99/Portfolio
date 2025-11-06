@@ -64,9 +64,12 @@ const About = () => {
     >
       <div className="max-w-7xl mx-auto w-full">
         {/* Heading */}
-        <h2 className="text-4xl font-bold text-center mb-12 text-inherit">
+        <h2 className="text-4xl font-bold text-center mb-4 text-inherit">
           About Me
         </h2>
+         <p className="mt-4 text-center text-inherit text-lg opacity-80 mb-8">
+
+Transforming visions into functional reality          </p>
 
         {/* Main Content */}
         <div className="about-card  border border-gray-200 dark:border-gray-700 rounded-2xl p-6 md:p-8 shadow-lg">

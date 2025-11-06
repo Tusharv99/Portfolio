@@ -27,9 +27,9 @@ const Experience = () => {
       ]
     },
     {
-      company: "LeafCraft, Hyderabad",
-      role: "Junior Developer (Part 2)",
-      period: "Sept 2024 – Dec 2024",
+      company: "AIVarient, Hyderabad",
+      role: "Full Stack Developer (Internship)",
+      period: "March 2024 – Sept 2024",
       details: [
         "Designed and developed user and admin interfaces for Employee Management System and E-commerce platform",
         "Implemented routing, navigation, and state management using Redux",
@@ -42,7 +42,10 @@ const Experience = () => {
   return (
     <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12 text-inherit">Experience</h2>
+        <h2 className="text-4xl font-bold text-center mb-4 text-inherit">Experience</h2>
+          <p className="mt-4 text-center text-inherit text-lg opacity-80 mb-8">
+
+Building solutions that make an impact     </p>
         
         <div className="relative">
           {/* Timeline line */}
@@ -91,7 +94,7 @@ const Experience = () => {
                 <div className={`transition-all duration-300 ${
                   activeIndex === index ? 'opacity-0 max-h-0' : 'opacity-100 max-h-20'
                 } overflow-hidden`}>
-                  <p className="text-gray-700 ">Hover to view details →</p>
+                  <p className="text-gray-500 ">Hover to view details →</p>
                 </div>
               </div>
             </div>
