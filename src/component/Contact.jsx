@@ -98,7 +98,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen flex flex-col items-center px-6 py-16 text-inherit"
+      className="min-h-screen flex flex-col items-center px-6 py-10 text-inherit"
     >
       {/* Heading */}
       <div className="text-center mb-12">

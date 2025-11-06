@@ -60,7 +60,7 @@ const About = () => {
     <section
       id="about"
       ref={sectionRef}
-      className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="min-h-screen flex items-center justify-center py-5 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto w-full">
         {/* Heading */}

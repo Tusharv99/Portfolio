@@ -55,7 +55,7 @@ const Certificates = () => {
   }, [selectedCert]);
 
   return (
-    <div className="py-20 px-4">
+    <div className="py-10 px-4">
       <div className="max-w-6xl mx-auto" ref={sectionRef}>
         {/* Header */}
         <div className="text-center mb-12">

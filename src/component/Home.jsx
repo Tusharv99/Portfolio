@@ -13,7 +13,7 @@ const Home = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-8 sm:py-22">
+    <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-24">
       <div className="max-w-7xl mx-auto w-full h-auto min-h-[85vh]">
         {/* Bento Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6 h-auto">
