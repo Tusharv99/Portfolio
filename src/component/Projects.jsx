@@ -8,26 +8,41 @@ const Projects = () => {
       title: "Restaurant Website",
       description:
         "Full-stack restaurant platform with separate admin and customer interfaces.",
-      tech: ["React.js", "Shadcn", "Context API", "MongoDB", "Node.js", "Express.js"],
+      tech: [
+        "React.js",
+        "Shadcn",
+        "Context API",
+        "MongoDB",
+        "Node.js",
+        "Express.js",
+      ],
       github: "https://github.com/Tusharv99/RestuUser",
       live: "https://resto.healthfier.com/",
-      image: "../../public/Restu.png",
+      image: "/Restu.png",
     },
     {
       title: "Admin Dashboard",
       description: "Admin dashboard for managing restaurant operations.",
-      tech: ["React.js", "Shadcn", "Context API", "MongoDB", "Node.js", "Express.js"],
+      tech: [
+        "React.js",
+        "Shadcn",
+        "Context API",
+        "MongoDB",
+        "Node.js",
+        "Express.js",
+      ],
       github: "https://github.com/Tusharv99/RestuAdmin",
       live: "https://restoadmin.healthfier.com/",
-      image: "../../public/Admin.png",
+      image: "/Admin.png",
     },
     {
       title: "Weather Site",
-      description: "Weather forecasting app with real-time city-based updates and responsive UI.",
+      description:
+        "Weather forecasting app with real-time city-based updates and responsive UI.",
       tech: ["React.js", "Redux", "TypeScript", "Weather API"],
       github: "https://github.com/Tusharv99/Klimate",
       live: "https://klimate-three-mu.vercel.app/",
-      image: "../../public/Klimate.png",
+      image: "/Klimate.png",
     },
     {
       title: "Cocktail Animation",
@@ -35,7 +50,7 @@ const Projects = () => {
       tech: ["React.js", "GSAP", "Shadcn"],
       github: "https://github.com/Tusharv99/Cocktail-GSAP-",
       live: "https://gsap-cocktail.netlify.app/",
-      image: "../../public/Mojito.png",
+      image: "/Mojito.png",
     },
   ];
 
