@@ -69,7 +69,7 @@ const About = () => {
         </h2>
 
         {/* Main Content */}
-        <div className="about-card bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 md:p-8 shadow-lg">
+        <div className="about-card bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 md:p-8 shadow-lg">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             {/* Text Content */}
             <div className="space-y-4">
