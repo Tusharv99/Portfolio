@@ -19,7 +19,7 @@ const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6 h-auto">
           
           {/* Main Name Card - Large */}
-          <div className="md:col-span-7 md:row-span-2 rounded-3xl p-6 sm:p-8 md:p-12 flex flex-col justify-center shadow-2xl hover:shadow-3xl transition-all duration-500 border-1 hover:scale-[1.01] relative overflow-hidden group min-h-[300px] sm:min-h-[400px]">
+          <div className="md:col-span-7 md:row-span-2 rounded-3xl p-6 sm:p-8 md:p-12 flex flex-col justify-center shadow-2xl hover:shadow-3xl  transition-all duration-500 border-1 hover:scale-[1.01] relative overflow-hidden group min-h-[300px] sm:min-h-[400px]">
             <div className="absolute inset-0 "></div>
             <div className="space-y-3 sm:space-y-4 relative z-10">
               <SplitText 

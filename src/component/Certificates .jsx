@@ -15,19 +15,19 @@ const Certificates = () => {
     {
       id: 1,
       name: "Java Full Stack Developer",
-      issuer: "ExcelR",
+      issuer: "Diploma - ExcelR",
       image: "/JavaFull.png",
     },
     {
       id: 2,
       name: "Web Development Certification",
-      issuer: "Coursera - University of Michigan",
+      issuer: "Coursera - Johns Hopkins  University",
       image: "/web.png",
     },
     {
       id: 3,
       name: "React Developer Certificate",
-      issuer: "Meta Professional Certificate",
+      issuer: "Coursera - Meta Professional Certificate",
       image: "/react.png",
     }
   ];
