@@ -76,7 +76,13 @@ const LoadingScreen = () => {
           ref={textRef}
           className="text-5xl md:text-7xl font-bold text-white mb-6 shiny-text-gsap"
         >
-          HELLO NAMASTE
+          HELLO 
+        </h1> <br />
+        <h1 
+          ref={textRef}
+          className="text-5xl md:text-7xl font-bold text-white mb-6 shiny-text-gsap"
+        >
+           NAMASTE
         </h1>
         
 
