@@ -4,7 +4,9 @@ import gsap from 'gsap';
 const LoadingScreen = () => {
   const [isVisible, setIsVisible] = useState(true);
   const loadingRef = useRef(null);
-  const textRef = useRef(null);
+  const textContainerRef = useRef(null);
+  const helloRef = useRef(null);
+  const namasteRef = useRef(null);
   const dotsRef = useRef([]);
 
   useEffect(() => {
@@ -12,8 +14,8 @@ const LoadingScreen = () => {
       // Main text animation
       const tl = gsap.timeline();
 
-      // Text entrance animation
-      tl.fromTo(textRef.current, 
+      // Text container entrance animation
+      tl.fromTo(textContainerRef.current, 
         { 
           scale: 0.8, 
           opacity: 0,
@@ -28,14 +30,19 @@ const LoadingScreen = () => {
         }
       );
 
-      // Shiny text animation (infinite loop)
-      gsap.to(textRef.current, {
-        backgroundPosition: '200% center',
-        duration: 2,
-        ease: 'power2.inOut',
-        repeat: -1,
-        yoyo: true
-      });
+      // Metallic shine animation for both texts
+      const shineTimeline = gsap.timeline({ repeat: -1 });
+      shineTimeline
+        .to([helloRef.current, namasteRef.current], {
+          '--shine-position': '100%',
+          duration: 1,
+          ease: 'power2.inOut'
+        })
+        .to([helloRef.current, namasteRef.current], {
+          '--shine-position': '-100%',
+          duration: 1,
+          ease: 'power2.inOut'
+        });
 
       // Loading dots animation
       dotsRef.current.forEach((dot, index) => {
@@ -50,12 +57,15 @@ const LoadingScreen = () => {
       });
 
       // Auto hide after 2 seconds
-      const hideTimeline = gsap.timeline({ delay: 2 });
+      const hideTimeline = gsap.timeline({ delay: 1.5 });
       hideTimeline.to(loadingRef.current, {
         opacity: 0,
         duration: 0.5,
         ease: "power2.inOut",
-        onComplete: () => setIsVisible(false)
+        onComplete: () => {
+          shineTimeline.kill(); 
+          setIsVisible(false);
+        }
       });
     }, loadingRef);
 
@@ -70,34 +80,98 @@ const LoadingScreen = () => {
       className="fixed inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900 z-50 flex items-center justify-center"
     >
       {/* Main Content */}
-      <div className="text-center">
-        {/* Shiny Text */}
-        <h1 
-          ref={textRef}
-          className="text-5xl md:text-7xl font-bold text-white mb-6 shiny-text-gsap"
-        >
-          HELLO 
-        </h1> <br />
-        <h1 
-          ref={textRef}
-          className="text-5xl md:text-7xl font-bold text-white mb-6 shiny-text-gsap"
-        >
-           NAMASTE
-        </h1>
+      <div ref={textContainerRef} className="text-center">
+        {/* Metallic Text with Shine Effect */}
+        <div className="mb-2">
+          <h1 
+            ref={helloRef}
+            className="text-7xl md:text-9xl font-bold metallic-text"
+            style={{
+              fontFamily: "'Great Vibes', cursive",
+              '--shine-position': '-100%',
+              background: `
+                linear-gradient(110deg, 
+                  transparent 40%, 
+                  rgba(255, 255, 255, 0.1) 50%, 
+                  rgba(255, 255, 255, 0.3) 55%, 
+                  rgba(255, 255, 255, 0.1) 60%, 
+                  transparent 70%
+                )`,
+              backgroundSize: '200% 100%',
+              backgroundPosition: 'var(--shine-position) 0%',
+              backgroundClip: 'text',
+              WebkitBackgroundClip: 'text',
+              color: 'transparent',
+              display: 'inline-block',
+              textShadow: `
+                0 0 1px rgba(255, 255, 255, 0.1),
+                0 1px 2px rgba(0, 0, 0, 0.8),
+                0 2px 4px rgba(0, 0, 0, 0.6)
+              `,
+              position: 'relative'
+            }}
+          >
+            HELLO
+          </h1>
+        </div>
         
+        <div className="mb-6">
+          <h1 
+            ref={namasteRef}
+            className="text-7xl md:text-9xl font-bold metallic-text"
+            style={{
+              fontFamily: "'Great Vibes', cursive",
 
-        {/* Subtitle */}
-        <p className="text-gray-400 text-lg mb-8 opacity-0" ref={el => {
-          if (el) {
-            gsap.to(el, {
-              opacity: 1,
-              duration: 0.8,
-              delay: 0.3
-            });
+              '--shine-position': '-100%',
+              background: `
+                linear-gradient(110deg, 
+                  transparent 40%, 
+                  rgba(255, 255, 255, 0.1) 50%, 
+                  rgba(255, 255, 255, 0.3) 55%, 
+                  rgba(255, 255, 255, 0.1) 60%, 
+                  transparent 70%
+                )`,
+              backgroundSize: '200% 100%',
+              backgroundPosition: 'var(--shine-position) 0%',
+              backgroundClip: 'text',
+              WebkitBackgroundClip: 'text',
+              color: 'transparent',
+              display: 'inline-block',
+              textShadow: `
+                0 0 1px rgba(255, 255, 255, 0.1),
+                0 1px 2px rgba(0, 0, 0, 0.8),
+                0 2px 4px rgba(0, 0, 0, 0.6)
+              `,
+              position: 'relative'
+            }}
+          >
+            NAMASTE
+          </h1>
+        </div>
+
+        {/* Base metallic color (hidden but provides the color) */}
+        <style jsx>{`
+          .metallic-text::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+              135deg,
+              #888 0%,
+              #ccc 25%,
+              #eee 50%,
+              #ccc 75%,
+              #888 100%
+            );
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            z-index: -1;
           }
-        }}>
-          Welcome to my portfolio
-        </p>
+        `}</style>
 
         {/* Loading Dots */}
         <div className="flex justify-center space-x-3">

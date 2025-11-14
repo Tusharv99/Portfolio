@@ -14,18 +14,15 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.shiny-text-gsap {
-  background: linear-gradient(
-    90deg,
-    #ffffff 0%,
-    #a5b4fc 25%,
-    #c7d2fe 50%,
-    #a5b4fc 75%,
-    #ffffff 100%
-  );
-  background-size: 200% auto;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
+html, body {
+  overflow-y: scroll; /* keeps layout stable */
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;  /* for Internet Explorer, Edge */
+  scrollbar-width: none;     /* for Firefox */
 }

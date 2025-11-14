@@ -49,6 +49,7 @@ Technical expertise across the stack
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {skills.map((skill, index) => (
+            
             <div 
               key={index}
               className="backdrop-blur-md bg-white/10 dark:bg-gray-900/10 border border-white/20 dark:border-gray-400/20 rounded-2xl p-4 shadow-lg hover:shadow-3xl transition-all duration-300 hover:scale-105"
