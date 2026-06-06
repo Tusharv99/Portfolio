@@ -17,7 +17,7 @@ const Projects = () => {
         "Express.js",
       ],
       github: "https://github.com/Tusharv99/RestuUser",
-      live: "https://resto.healthfier.com/",
+      live: "https://restu-user.vercel.app/",
       image: "/Restu.png",
     },
     {
@@ -32,7 +32,7 @@ const Projects = () => {
         "Express.js",
       ],
       github: "https://github.com/Tusharv99/RestuAdmin",
-      live: "https://restoadmin.healthfier.com/",
+      live: "https://restu-admin.vercel.app/",
       image: "/Admin.png",
     },
     {
